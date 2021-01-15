@@ -10,7 +10,8 @@ body {
 
 .product {
     padding: 25px calc( 50% - 1170px / 2);
-    background: #445161;
+    background-color: purple;
+    background: linear-gradient(to top, #8a77ad, #4e2e4a);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -23,6 +24,12 @@ body {
     color: #FFFFFF;
     margin: 0;
     margin-bottom: 40px;
+}
+
+.product-list {
+    list-style-image: url(image/checkbox.svg);
+    list-style-position: outside;
+    padding-left: 20px;
 }
 
 .product-item {
@@ -59,9 +66,14 @@ body {
 }
 
 .digniti {
+    background-color: pink;
     padding: 25px calc( 50% - 1170px / 2);
     background: #F5F5F5;
     padding-bottom: 48px;
+    background-image: url(image/bg-digniti.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .digniti-title {
@@ -75,15 +87,27 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    list-style-image: url(image/plus-icon.svg);
+    padding: 0;
 }
 
 .diginiti-item {
+    display: flex;
+    align-items: flex-start;
     width: 45%;
     margin-bottom: 33px;
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+}
+
+.diginiti-item::before {
+    content: '+';
+    color: #FFFFFF;
+    font-size: 2em;
+    padding: 6px 8px;
+    background-color: #39233f;
+    margin-right: 16px;
+    margin-top: 7px;
 }
 
 .screenshots {
@@ -126,12 +150,17 @@ body {
 }
 
 .reviews {
+    background-color: pink;
     padding: 25px calc( 50% - 1170px / 2);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background: #F5F5F5;
     margin-bottom: 45px;
+    background-image: url(image/bg-digniti.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .reviews-title {
@@ -153,16 +182,41 @@ body {
     margin-right: 13px;
 }
 
+.reviews-figcaption {
+    position: relative;
+    width: 483px;
+    background: #eedce4;
+    border-radius: 5px;
+    padding: 16px 10px 5px 15px;
+}
+
+.reviews-figcaption::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: 14px solid transparent;
+    border-right: 20px solid #eedce4;
+    position: absolute;
+    left: -25px;
+    top: 43px;
+}
+
 .reviews-text {
     font-size: 14px;
     line-height: 18px;
     color: #000000;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: Roboto, sans-serif;
 }
 
 .reviews-signature {
     font-size: 14px;
     line-height: 18px;
     color: #989898;
+    margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
 .buy {
@@ -188,6 +242,7 @@ body {
     background: #445161;
     border-radius: 5px;
     padding-top: 13px;
+    background: linear-gradient(to top, #4e2b45, #505f72);
 }
 
 .card-title {
@@ -228,7 +283,7 @@ body {
 .card-button {
     padding: 16px 90px 9px 90px;
     background: #FFFFFF;
-    margin: 16px 19px;
+    margin: 16px 38px;
     font-size: 18px;
     line-height: 18px;
     color: #445161;
@@ -238,9 +293,10 @@ body {
 }
 
 .footer {
+    background-color: purple;
     padding: 25px calc( 50% - 1170px / 2);
     display: flex;
-    background: #445162;
+    background: linear-gradient(to top, #4e2e4a, #8a77ad);
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -289,15 +345,24 @@ body {
 
 .footer-list {
     padding: 0;
-    margin: 0;
 }
 
-.footer-list {
-    list-style-type: none;
+.footer-list-link {
+    text-decoration: none;
+}
+
+.icon:hover {
+    background-color: #fff;
+    color: #445162;
+    outline: 1px solid #445162;
+}
+
+.icon-icq:hover {
+    fill: blue;
 }
 
 .img-footer {
-    margin-top: 48px;
+    margin-top: 28px;
 }
 
 .copy {
